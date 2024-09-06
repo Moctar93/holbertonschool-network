@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Script to display all active IPv4 addresses on the machine
+# Script to display all active IPv4 addresses on the machine, including the loopback
 
-# Use 'ip a' to list all network interfaces and filter out the IPv4 addresses
-ip -4 -o addr show | awk '{print $4}' | cut -d'/' -f1 | grep -v '^$'
+# Use `hostname -I` to retrieve only the IP addresses, and ensure loopback is included
+ip -4 -o addr show | awk '{print $4}' | cut -d'/' -f1
