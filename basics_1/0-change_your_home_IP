@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Script to configure /etc/hosts with custom DNS entries
+# Backup the original /etc/hosts file
+cp /etc/hosts /etc/hosts.bak
+
+# Add or update the localhost entry
+sed -i '/127.0.0.1\s\+localhost/s/^/#/' /etc/hosts # Comment out existing localhost entry
+echo "127.0.0.2 localhost" | tee -a /etc/hosts
+
+# Add or update the facebook.com entry
+sed -i '/facebook.com/s/^/#/' /etc/hosts # Comment out any existing facebook.com entry
+echo "8.8.8.8 facebook.com" | tee -a /etc/hosts
+
+echo "Configuration complete. /etc/hosts has been updated."
