@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
-#  retrieves the IPv4 addresses of the network interfaces
-ifconfig | grep -oP '(?<=inet\s)\d+(\.\d+){3}'
+# Script to retrieve the IPv4 addresses of the network interfaces
+
+# Use 'ip a' to list all network interfaces and filter out the IPv4 addresses
+ip a | grep -oE '\b([0-9]{1,3}\.){3}[0-9]{1,3}\b'
+
