@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-# Script to display all active IPv4 addresses on the machine, including the loopback
 
-# Use `hostname -I` to retrieve only the IP addresses, and ensure loopback is included
-ip -4 -o addr show | awk '{print $4}' | cut -d'/' -f1
+# Display all active IPv4 IPs on the machine
+# Using 'hostname -I' to get all the active IPs
+
+hostname -I | tr ' ' '\n'
+
