@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
-# Use netstat to display listening ports
 
-netstat -ltpnu
+# This script shows the active listening TCP and UDP ports along with the PID/Program names.
+
+# Use `ss` to list listening ports with TCP and UDP protocols.
+# Display protocol, address, port, PID, and program name
+sudo ss -tulnpx
+
