@@ -1,0 +1,26 @@
+1. Navigateur (www.google.com)
+   |
+   v
+2. Serveur DNS (Résolution de l'URL en IP)
+   |
+   v
+3. Serveur Web (Requête vers l'IP du serveur)
+   |
+   v
+4. Pare-feu (Filtrage de la requête)
+   |
+   v
+5. Équilibreur de charge (Distribution des requêtes)
+   |
+   v
+6. Serveur Web (Réponse HTTP avec fichiers statiques)
+   |
+   v
+7. Serveur d'application (Génération de la page dynamique)
+   |
+   v
+8. Base de données (Récupération des données)
+   |
+   v
+9. Navigateur (Affichage de la page web)
+
